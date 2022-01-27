@@ -1,4 +1,4 @@
-import { createSignal, createEffect } from 'solid-js';
+import { createSignal, createEffect, onCleanup } from 'solid-js';
 import './index.css';
 
 function App() {
@@ -17,6 +17,14 @@ function App() {
 
   // const counter = getCounter()
   // setCounter(counter + 1)
+
+  // const interval = setInterval(() => {
+  //   setCounter( counter() + 1)
+  // }, 1000)
+
+  // onCleanup(() => {
+  //   clearInterval(interval)
+  // })
 
   return (
     <>
