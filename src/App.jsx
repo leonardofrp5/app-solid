@@ -5,6 +5,19 @@ function App() {
   const [counter, setCounter] = createSignal(0);
   console.log('Rende cuerpo de la función');
 
+  // const counter = getCounter()
+
+  // createEffect(prev => {
+  //   const sum = prev + counter()
+  //   console.log(sum)
+  //   console.log(prev, counter())
+  //   return sum
+  // }, 0);
+
+
+  // const counter = getCounter()
+  // setCounter(counter + 1)
+
   return (
     <>
       <h1>Nuestra contador</h1>
