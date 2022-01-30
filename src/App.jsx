@@ -1,4 +1,6 @@
 import { createSignal, createEffect, onCleanup, createMemo } from 'solid-js';
+
+import ComponentCounter from './components/ComponentCounter';
 import './index.css';
 
 function App() {
@@ -26,15 +28,17 @@ function App() {
   //   clearInterval(interval)
   // })
 
-  // const getText = createMemo(() => counter() % 2 === 0 ? 'Es par' : 'Es impar')
+  const getText = createMemo(() => counter() % 2 === 0 ? 'Es par' : 'Es impar')
+  const increment = () => setCounter(counter() + 1)
 
   return (
     <>
-      <h1>Nuestra contador</h1>
-      <p>{counter}</p>
+      {/* <h1>Nuestra contador</h1> */}
+      {/* <p>{counter}</p> */}
       {/* <p>{counter % 2 === 0 ? 'Es par' : 'Es impar'}</p> */}
       {/* <p>{getText()}</p> */}
-      <button onClick={() => setCounter(counter => counter + 1)}>Incrementar</button>
+      {/* <button onClick={() => setCounter(counter => counter + 1)}>Incrementar</button> */}
+      <ComponentCounter counter={counter()} getText={getText()} increment={increment}  />
     </>
   );
 };
