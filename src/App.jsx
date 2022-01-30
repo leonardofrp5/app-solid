@@ -1,4 +1,4 @@
-import { createSignal, createEffect, onCleanup } from 'solid-js';
+import { createSignal, createEffect, onCleanup, createMemo } from 'solid-js';
 import './index.css';
 
 function App() {
@@ -26,11 +26,14 @@ function App() {
   //   clearInterval(interval)
   // })
 
+  // const getText = createMemo(() => counter() % 2 === 0 ? 'Es par' : 'Es impar')
+
   return (
     <>
       <h1>Nuestra contador</h1>
       <p>{counter}</p>
       {/* <p>{counter % 2 === 0 ? 'Es par' : 'Es impar'}</p> */}
+      {/* <p>{getText()}</p> */}
       <button onClick={() => setCounter(counter => counter + 1)}>Incrementar</button>
     </>
   );
