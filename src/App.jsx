@@ -1,44 +1,17 @@
-import { createSignal, createEffect, onCleanup, createMemo } from 'solid-js';
+import { createSignal, createMemo } from 'solid-js';
 
-import ComponentCounter from './components/ComponentCounter';
+// import ComponentCounter from './components/ComponentCounter';
 import './index.css';
 
 function App() {
   const [counter, setCounter] = createSignal(0);
-  console.log('Rende cuerpo de la función');
 
-  // const counter = getCounter()
-
-  // createEffect(prev => {
-  //   const sum = prev + counter()
-  //   console.log(sum)
-  //   console.log(prev, counter())
-  //   return sum
-  // }, 0);
-
-
-  // const counter = getCounter()
-  // setCounter(counter + 1)
-
-  // const interval = setInterval(() => {
-  //   setCounter( counter() + 1)
-  // }, 1000)
-
-  // onCleanup(() => {
-  //   clearInterval(interval)
-  // })
-
-  const getText = createMemo(() => counter() % 2 === 0 ? 'Es par' : 'Es impar')
-  const increment = () => setCounter(counter() + 1)
+  // const getText = createMemo(() => counter() % 2 === 0 ? 'Es par' : 'Es impar')
+  // const increment = () => setCounter(counter() + 1)
 
   return (
     <>
-      {/* <h1>Nuestra contador</h1> */}
-      {/* <p>{counter}</p> */}
-      {/* <p>{counter % 2 === 0 ? 'Es par' : 'Es impar'}</p> */}
-      {/* <p>{getText()}</p> */}
-      {/* <button onClick={() => setCounter(counter => counter + 1)}>Incrementar</button> */}
-      <ComponentCounter counter={counter()} getText={getText()} increment={increment}  />
+      {/* <ComponentCounter counter={counter()} getText={getText()} increment={increment} /> */}
     </>
   );
 };
