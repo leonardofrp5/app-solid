@@ -9,19 +9,3 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
-
-#root {
-  display: grid;
-  place-content: center;
-  min-height: 100vh;
-  font-size: 24px;
-}
-
-button {
-  font-size: 24px;
-  padding: 8px 16px;
-  border-radius: 4px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
