@@ -8,20 +8,20 @@ const fetchData = () => {
     .then(response => {
       return response.results
     })
-  }
+}
 
 function App() {
   const [getData] = createResource(fetchData, { initialValue: [] })
 
   return (
     <div className="container">
-    {getData().map(i => {
-      return (
-        <div>
-          <h3>{i.name}</h3>
-          <img src={i.image} alt={`imagen de " ${i.name}`} />
-        </div>)
-    })}
+      {getData().map(({ name, image }) => {
+        return (
+          <div>
+            <h3>{name}</h3>
+            <img src={image} alt={`imagen de ${name}`} />
+          </div>)
+      })}
     </div>
   );
 };
