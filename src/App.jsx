@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <h1>Nuestra contador</h1>
+      <h1>Muestra contador</h1>
       <p>{counter}</p>
       {/* <p>{counter % 2 === 0 ? 'Es par' : 'Es impar'}</p> */}
       <button onClick={() => setCounter(counter => counter + 1)}>Incrementar</button>
