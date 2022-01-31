@@ -1,9 +1,9 @@
-import { createSignal, createEffect } from 'solid-js';
+import { createSignal } from 'solid-js';
 import './index.css';
 
 function App() {
   const [counter, setCounter] = createSignal(0);
-  console.log('Rende cuerpo de la función');
+  //console.log('Rende cuerpo de la función');
 
   return (
     <>
