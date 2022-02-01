@@ -13,6 +13,6 @@ function App() {
       <button onClick={() => setCounter(counter => counter + 1)}>Incrementar</button>
     </>
   );
-};
+}
 
 export default App;
