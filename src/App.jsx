@@ -6,12 +6,12 @@ const fetchData = () => {
   return fetch('https://rickandmortyapi.com/api/character')
     .then(res => res.json())
     .then(response => {
-      return response.results
-    })
-}
+      return response.results;
+    });
+};
 
 function App() {
-  const [getData] = createResource(fetchData, { initialValue: [] })
+  const [getData] = createResource(fetchData, { initialValue: [] });
 
   return (
     <div className="container">
@@ -19,11 +19,12 @@ function App() {
         return (
           <div>
             <h3>{name}</h3>
-            <img src={image} alt={`imagen de ${name}`} />
-          </div>)
+            <img src={image} alt={`Imagen ${name}`} />
+          </div>
+        );
       })}
     </div>
   );
-};
+}
 
 export default App;
