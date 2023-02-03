@@ -19,7 +19,7 @@ function App() {
         return (
           <div>
             <h3>{name}</h3>
-            <img src={image} alt={`Imagen ${name}`} />
+            <img src={image} alt={`Imagen... ${name}`} />
           </div>
         );
       })}
